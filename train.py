@@ -1,6 +1,7 @@
 import kagglehub
 import pandas as pd
 import os
+import ray
 from ludwig.api import LudwigModel
 from ludwig.automl import auto_train
 
@@ -13,8 +14,10 @@ if not os.path.exists('path.txt'):
 with open('path.txt', 'r') as f:
     path = f.read().strip()
 
-os.environ["RAY_num_cpus"] = "1"
-os.environ["RAY_DISABLE_MEMORY_MONITOR"] = "1" 
+# if not ray.is_initialized():
+#     ray.init(num_cpus=1, ignore_reinit_error=True, include_dashboard=False)
+
+# os.environ["RAY_num_cpus"] = "1"
 
 df = pd.read_csv(os.path.join(path, 'train.csv'))
 
@@ -29,4 +32,5 @@ auto_train_results = auto_train(
 
 print("AutoML training completed!")
 print(auto_train_results)
+# ray.shutdown()
 
