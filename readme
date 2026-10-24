@@ -5,6 +5,7 @@ In Terminal
 2. pip install -r requirements.txt
 3. python train.py
 4. get API Key From Kaggle and paste it to download the dataset
+5. get API key from ray using "ray get-auth-token"
 
 
 # gitignore 
