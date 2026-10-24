@@ -4,6 +4,7 @@ import os
 from ludwig.api import LudwigModel
 
 if not os.path.exists('path.txt'):
+    kagglehub.login()
     path = kagglehub.competition_download('titanic')
     with open('path.txt', 'w') as f:
         f.write(path)
