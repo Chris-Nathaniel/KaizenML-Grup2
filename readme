@@ -1,10 +1,15 @@
 # Installation Procedure
 
 In Terminal
-1. python -m venv .venv
-2. pip install -r requirements.txt
-3. python train.py
-4. get API Key From Kaggle and paste it to download the dataset
+1. git clone https://github.com/Chris-Nathaniel/KaizenML-Grup2.git
+2. cd .\KaizenML-Grup2\
+3. python -m venv .venv
+4. .venv/Scriptts/activate
+5. pip install -r requirements.txt
+6. get API key from ray using "ray get-auth-token" in terminal
+7. python train.py
+8. get API Key From Kaggle and paste it to download the dataset
+
 
 
 # gitignore 
