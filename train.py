@@ -13,7 +13,8 @@ if not os.path.exists('path.txt'):
 with open('path.txt', 'r') as f:
     path = f.read().strip()
 
-os.environ["RAY_num_cpus"] = "2"
+os.environ["RAY_num_cpus"] = "1"
+os.environ["RAY_DISABLE_MEMORY_MONITOR"] = "1" 
 
 df = pd.read_csv(os.path.join(path, 'train.csv'))
 
