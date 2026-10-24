@@ -1,0 +1,18 @@
+# Installation Procedure
+
+In Terminal
+1. python -m venv .venv
+2. pip install -r requirements.txt
+3. python train.py
+4. get API Key From Kaggle and paste it to download the dataset
+
+
+# gitignore 
+Create a gitignore before you push to github
+venv/
+.venv/
+/results
+/path.txt
+/titanice_model
+/hyperopt
+__pycache__/**/*

@@ -2,3 +2,6 @@ venv/
 .venv/
 /results
 /path.txt
+/titanice_model
+/hyperopt
+__pycache__/**/*
