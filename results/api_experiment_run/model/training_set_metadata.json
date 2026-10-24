@@ -1,0 +1,154 @@
+{
+    "Age": {
+        "mean": 29.361581802368164,
+        "preprocessing": {
+            "computed_fill_value": 0.0,
+            "computed_outlier_fill_value": 0.0,
+            "fill_value": 0.0,
+            "missing_value_strategy": "fill_with_const",
+            "normalization": "zscore",
+            "outlier_strategy": null,
+            "outlier_threshold": 3.0
+        },
+        "std": 13.019696235656738
+    },
+    "Embarked": {
+        "idx2str": [
+            "S",
+            "C",
+            "Q"
+        ],
+        "preprocessing": {
+            "cache_encoder_embeddings": false,
+            "computed_fill_value": "<UNK>",
+            "fill_value": "<UNK>",
+            "lowercase": false,
+            "missing_value_strategy": "fill_with_const",
+            "most_common": 10000
+        },
+        "str2freq": {
+            "C": 168,
+            "Q": 77,
+            "S": 646
+        },
+        "str2idx": {
+            "C": 1,
+            "Q": 2,
+            "S": 0
+        },
+        "vocab_size": 3
+    },
+    "Fare": {
+        "mean": 32.20420837402344,
+        "preprocessing": {
+            "computed_fill_value": 0.0,
+            "computed_outlier_fill_value": 0.0,
+            "fill_value": 0.0,
+            "missing_value_strategy": "fill_with_const",
+            "normalization": "zscore",
+            "outlier_strategy": null,
+            "outlier_threshold": 3.0
+        },
+        "std": 49.69343185424805
+    },
+    "Parch": {
+        "mean": 0.3815937042236328,
+        "preprocessing": {
+            "computed_fill_value": 0.0,
+            "computed_outlier_fill_value": 0.0,
+            "fill_value": 0.0,
+            "missing_value_strategy": "fill_with_const",
+            "normalization": "zscore",
+            "outlier_strategy": null,
+            "outlier_threshold": 3.0
+        },
+        "std": 0.8060572147369385
+    },
+    "Pclass": {
+        "idx2str": [
+            "3",
+            "1",
+            "2"
+        ],
+        "preprocessing": {
+            "cache_encoder_embeddings": false,
+            "computed_fill_value": "<UNK>",
+            "fill_value": "<UNK>",
+            "lowercase": false,
+            "missing_value_strategy": "fill_with_const",
+            "most_common": 10000
+        },
+        "str2freq": {
+            "1": 216,
+            "2": 184,
+            "3": 491
+        },
+        "str2idx": {
+            "1": 1,
+            "2": 2,
+            "3": 0
+        },
+        "vocab_size": 3
+    },
+    "Sex": {
+        "idx2str": [
+            "male",
+            "female"
+        ],
+        "preprocessing": {
+            "cache_encoder_embeddings": false,
+            "computed_fill_value": "<UNK>",
+            "fill_value": "<UNK>",
+            "lowercase": false,
+            "missing_value_strategy": "fill_with_const",
+            "most_common": 10000
+        },
+        "str2freq": {
+            "female": 314,
+            "male": 577
+        },
+        "str2idx": {
+            "female": 1,
+            "male": 0
+        },
+        "vocab_size": 2
+    },
+    "SibSp": {
+        "mean": 0.523007869720459,
+        "preprocessing": {
+            "computed_fill_value": 0.0,
+            "computed_outlier_fill_value": 0.0,
+            "fill_value": 0.0,
+            "missing_value_strategy": "fill_with_const",
+            "normalization": "zscore",
+            "outlier_strategy": null,
+            "outlier_threshold": 3.0
+        },
+        "std": 1.1027435064315796
+    },
+    "Survived": {
+        "idx2str": [
+            "0",
+            "1"
+        ],
+        "preprocessing": {
+            "cache_encoder_embeddings": false,
+            "computed_fill_value": "<UNK>",
+            "fill_value": "<UNK>",
+            "lowercase": false,
+            "missing_value_strategy": "drop_row",
+            "most_common": 10000
+        },
+        "str2freq": {
+            "0": 549,
+            "1": 342
+        },
+        "str2idx": {
+            "0": 0,
+            "1": 1
+        },
+        "vocab_size": 2
+    },
+    "checksum": "WnZBmxGd5dCal4u5NZGaKQ==",
+    "data_train_parquet_fp": "C:\\Users\\chris\\AppData\\Local\\Temp\\e14feaa9cf8d11f18decf46d3f67dd8c.training.parquet"
+}
