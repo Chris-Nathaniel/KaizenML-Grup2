@@ -2,9 +2,9 @@ import kagglehub
 import pandas as pd
 import os
 import json
+from ludwig.api import LudwigModel
 from ludwig.automl import auto_train
 from ray.tune import CheckpointConfig
-import json
 
 #ini untuk download dataset dari kaggle, kalau udah pernah download, dia bakal baca dari path.txt
 if not os.path.exists('path.txt'):
@@ -52,6 +52,19 @@ trial_result = best_trial.last_result
 parameters = json.loads(trial_result["parameters"])
 eval_stats = json.loads(trial_result["eval_stats"])
 metrics = eval_stats["Survived"]
+
+trial_model_directory = os.path.join(
+    trial_result["trial_dir"], "hyperopt_ft_transformer", "model"
+)
+if not os.path.isdir(trial_model_directory):
+    raise FileNotFoundError(
+        f"Best trial model files were not found at {trial_model_directory}"
+    )
+
+best_model = LudwigModel.load(trial_model_directory)
+model_directory = os.path.join(output_directory, "best_model")
+best_model.save(model_directory)
+print(f"Best model saved to: {model_directory}")
 
 print(f"\nBest trial: {best_trial.trial_id}")
 print(f"Validation ROC-AUC: {trial_result['metric_score']:.4f}")
