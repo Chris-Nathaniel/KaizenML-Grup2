@@ -7,7 +7,7 @@ In Terminal
 4. .venv/Scriptts/activate
 5. pip install -r requirements.txt
 6. get API key from ray using "ray get-auth-token --generate" in terminal
-7. python train.py
+7. python automl-train.py
 8. get API Key From Kaggle and paste it to download the dataset
 
 
